@@ -4,17 +4,49 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>技术记录</title>
+  <title>Adb常用命令 | 技术记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="LiDaofu&apos;s blog| 爱生活，爱技术 | Java | Android | IOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="技术记录">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="adb shell常用命令首先通过连接手机通过adb shell命令进入到shell环境
+1.adb shell ps:查看进程信息
+2.adb shell service list:查看后台运行的所有服务
+3.adb shell dumpsys [options] ：输出options的信息通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息常用的一般是d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adb常用命令">
+<meta property="og:url" content="http://yoursite.com/2016/08/18/Adb常用命令/index.html">
 <meta property="og:site_name" content="技术记录">
-<meta property="og:description" content="LiDaofu&apos;s blog| 爱生活，爱技术 | Java | Android | IOS">
+<meta property="og:description" content="adb shell常用命令首先通过连接手机通过adb shell命令进入到shell环境
+1.adb shell ps:查看进程信息
+2.adb shell service list:查看后台运行的所有服务
+3.adb shell dumpsys [options] ：输出options的信息通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息常用的一般是d">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/AB5335A2-111E-46F9-9ED5-0A8EDD64C4CD.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/FFBA38ED-F64A-4B7A-A5B0-4E25BC2A0219.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/960AA3B8-0FC7-4E61-BFC9-69FE216F8C5D.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/F975F70B-993D-4EB8-B5BA-F193F8386253.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/D98CEE0D-783A-4B7E-ADA0-BF3D6FF67F20.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/3DE79171-1AC4-44E9-9FD4-1F3D35730357.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/79D93CD5-3FE5-4D00-9182-E5FDD8A4FF01.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/F884B2AD-296F-41C4-8613-054C9D1971C2.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/EF645A0A-9A09-4FC7-8847-FA9629B2E75C.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/2156226B-8C53-4EDC-8A92-18A675D8B80C.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/E7E4AADE-2AB2-4FD6-A7B2-9A08B642C36B.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/BE770E2C-99F5-4809-BF08-D7A34601F294.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/E5C159D0-B150-4113-8951-0AF02EDF9A8A.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/786B6986-E2F4-4F9A-B792-0B69C59FCB97.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/111B3B31-4BEE-42D7-884F-AC7A49E4DE59.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/EC34842B-800C-442B-9B38-2A5A01E8DE8A.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/C07FE704-C730-4C22-A13F-1DC5B771F215.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/CF08D1F4-981F-41BF-9412-15B8A1B0652A.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/614BACFF-8A38-470E-85A4-C907F5560083.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/086D46A1-CCB3-4603-BEF3-529815722D1E.png">
+<meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/509F0CD9-428B-4FA2-A882-EF0BF490ED17.png">
+<meta property="og:updated_time" content="2016-08-19T03:41:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术记录">
-<meta name="twitter:description" content="LiDaofu&apos;s blog| 爱生活，爱技术 | Java | Android | IOS">
+<meta name="twitter:title" content="Adb常用命令">
+<meta name="twitter:description" content="adb shell常用命令首先通过连接手机通过adb shell命令进入到shell环境
+1.adb shell ps:查看进程信息
+2.adb shell service list:查看后台运行的所有服务
+3.adb shell dumpsys [options] ：输出options的信息通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息常用的一般是d">
+<meta name="twitter:image" content="http://oc3lx6w3r.bkt.clouddn.com/AB5335A2-111E-46F9-9ED5-0A8EDD64C4CD.png">
   
     <link rel="alternative" href="/atom.xml" title="技术记录" type="application/atom+xml">
   
@@ -188,9 +220,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-Adb常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Adb常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/08/18/Adb常用命令/" class="article-date">
@@ -206,12 +236,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/18/Adb常用命令/">Adb常用命令</a>
+    <h1 class="article-title" itemprop="name">
+      Adb常用命令
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -229,83 +266,68 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/18/Android相关导图/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android相关导图</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
-
-  
-    <article id="post-Android相关导图" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/18/Android相关导图/" class="article-date">
-  	<time datetime="2016-08-18T14:28:00.000Z" itemprop="datePublished">2016-08-18</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/18/Android相关导图/">Android相关导图</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-View手势"><a href="#1-View手势" class="headerlink" title="1. View手势"></a>1. View手势</h3><p><img src="http://oc3lx6w3r.bkt.clouddn.com/88d558d78d5f6716.jpg" alt="view_url"></p>
-<h3 id="2-View的坐标及位置"><a href="#2-View的坐标及位置" class="headerlink" title="2. View的坐标及位置"></a>2. View的坐标及位置</h3><p><img src="http://oc3lx6w3r.bkt.clouddn.com/5ce15b91eb13fbec.jpg" alt="view_location"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Adb常用命令" data-title="Adb常用命令" data-url="http://yoursite.com/2016/08/18/Adb常用命令/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -329,8 +351,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
