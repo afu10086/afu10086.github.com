@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -45,17 +45,35 @@
   
 
   
+    
+      
+    
 
-  
-
+    
   
 
   
 
   
     
+      
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -68,7 +86,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux,Vim," />
 
 
 
@@ -84,29 +102,31 @@
 
 
 
-<meta name="description" content="LiDaofu&apos;s blog| 爱生活，爱技术 | Java | Android | IOS">
+<meta name="description" content="Vim简介Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim编辑器的使用">
 <meta property="og:url" content="http://yoursite.com/2016/08/22/Vim编辑器的使用/index.html">
 <meta property="og:site_name" content="技术记录">
-<meta property="og:description" content="LiDaofu&apos;s blog| 爱生活，爱技术 | Java | Android | IOS">
-<meta property="og:updated_time" content="2016-08-22T14:51:20.000Z">
+<meta property="og:description" content="Vim简介Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具">
+<meta property="og:image" content="http://yoursite.com/images/vim_model.png">
+<meta property="og:updated_time" content="2016-11-13T14:58:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vim编辑器的使用">
-<meta name="twitter:description" content="LiDaofu&apos;s blog| 爱生活，爱技术 | Java | Android | IOS">
+<meta name="twitter:description" content="Vim简介Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具">
+<meta name="twitter:image" content="http://yoursite.com/images/vim_model.png">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -120,7 +140,7 @@
   <title> Vim编辑器的使用 | 技术记录 </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -138,7 +158,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -152,7 +172,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">爱生活，爱技术,记录技术的点点滴滴</p>
+  <p class="site-subtitle">爱生活,爱技术,记录技术的点点滴滴</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -173,7 +193,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -181,7 +201,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -189,15 +209,15 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-            Tags
+            标签
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-            Schedule
+            关于
           </a>
         </li>
       
@@ -250,7 +270,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-08-22T22:51:20+08:00" content="2016-08-22">
               2016-08-22
             </time>
@@ -279,7 +299,24 @@
       
 
       
-        
+        <h5 id="Vim简介"><a href="#Vim简介" class="headerlink" title="Vim简介"></a>Vim简介</h5><p>Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具<br><a id="more"></a></p>
+<h5 id="Vim的工作模式"><a href="#Vim的工作模式" class="headerlink" title="Vim的工作模式"></a>Vim的工作模式</h5><p>基本上 vi/vim 共分为三种模式，分别是一般模式、编辑模式与指令列命令模式。 这三种模式的作用分别是:  </p>
+<ol>
+<li>一般模式：<br>以 vi 打开一个档案就直接进入一般模式了(这是默认的模式)。在这个模式中， 你可以使用『上下左右』按键来移动光标，你可以使用『删除字符』或『删除整行』来处理档案内容， 也可以使用『复制、贴上』来处理你的文件数据  </li>
+<li>编辑模式：<br>在一般模式中可以进行删除、复制、贴上等等的动作，但是却无法编辑文件内容的！ 要等到你按下『i, I, o, O, a, A, r, R』等任何一个字母之后才会进入编辑模式。注意了！通常在 Linux 中，按下这些按键时，在画面的左下方会出现『INSERT 或 REPLACE 』的字样，此时才可以进行编辑。而如果要回到一般模式时， 则必须要按下『Esc』这个按键即可退出编辑模式  </li>
+<li>指令列命令模式：<br>在一般模式当中，输入『 : / ? 』三个中的任何一个按钮，就可以将光标移动到最底下那一行。在这个模式当中， 可以提供你『搜寻资料』的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等等的动作则是在此模式中达成的<br>简单的说，我们可以将这三个模式想成底下的图标来表示:<br><img src="/images/vim_model.png" alt=""></li>
+</ol>
+<h5 id="Vim按键说明"><a href="#Vim按键说明" class="headerlink" title="Vim按键说明"></a>Vim按键说明</h5><ol>
+<li><p>一般模式可用的按钮说明，光标移动、复制粘贴、搜寻取代等<br>vi可以直接用键盘上的光标来上下左右移动，但正规的vi是用小写英文字母「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格<br>「ctrl」+「b」：屏幕往“后”移动一页<br>「ctrl」+「f」：屏幕往“前”移动一页<br>「ctrl」+「u」：屏幕往“后”移动半页<br>「ctrl」+「d」：屏幕往“前”移动半页<br>「ctrl+$」：移动到光标所在行的“行尾”<br>「ctrl+^」：移动到光标所在行的“行首”<br>「w」：光标跳到下个字的开头<br>「e」：光标跳到下个字的字尾<br>「b」：光标回到上个字的开头<br>「#l」：光标移到该行的第#个位置，如：5l,56l<br>查找关键字：<br>「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止<br>「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止<br>跳到文件中的某一行：<br>「#」：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行<br>删除：<br>「x」：每按一次，删除光标所在位置的“后面”一个字符<br>「#x」：例如，「6x」表示删除光标所在位置的“后面”6个字符<br>「X」：大写的X，每按一次，删除光标所在位置的“前面”一个字符<br>「#X」：例如，「20X」表示删除光标所在位置的“前面”20个字符<br>「dd」：删除光标所在行<br>「#dd」：从光标所在行开始删除#行<br>复制与粘贴：<br>「yw」：将光标所在之处到字尾的字符复制到缓冲区中<br>「#yw」：复制#个字到缓冲区<br>「yy」：复制光标所在行到缓冲区<br>「#yy」：例如，「6yy」表示拷贝从光标所在的该行“往下数”6行文字<br>「p」：将缓冲区内的字符贴到光标所在位置。注意：所有与“y”有关的复制命令都必须与“p”配合才能完成复制与粘贴功能</p>
+</li>
+<li><p>一般模式切换到编辑模式的可用的按钮说明<br>[i]：进入插入编辑模式，用户可以对文件进行编辑修改<br>[ESC]：退出编辑模式，进入一般模式</p>
+</li>
+<li><p>一般模式切换到指令列模式的可用的按钮说明<br>「w」：在冒号输入字母「w」就可以将文件保存起来<br>「q」：按「q」就是退出，如果无法离开vi，可以在「q」后跟一个「!」强制离开vi<br>「qw」：保存文件并退出，搭配「w」一起使用，这样在退出的时候还可以保存文件<br>[q!]：若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案</p>
+</li>
+<li><p>vim 环境的变更，在一般模式下输入[:]再输入<br>[set nu]：显示行号，设定之后，会在每一行的前缀显示该行的行号<br>[set nonu]：与 set nu 相反，为取消行号！</p>
+</li>
+</ol>
+
       
     </div>
 
@@ -299,13 +336,21 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/Vim/" rel="tag">#Vim</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/22/Linux常用命令/" rel="next" title="Linux常用命令">
-                <i class="fa fa-chevron-left"></i> Linux常用命令
+              <a href="/2016/08/22/Linux常用命令/" rel="next" title="Linux学习及常用命令">
+                <i class="fa fa-chevron-left"></i> Linux学习及常用命令
               </a>
             
           </div>
@@ -359,10 +404,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -370,21 +415,28 @@
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://oc3lx6w3r.bkt.clouddn.com/meImage.jpg"
                alt="福" />
           <p class="site-author-name" itemprop="name">福</p>
-          <p class="site-description motion-element" itemprop="description">LiDaofu's blog| 爱生活，爱技术 | Java | Android | IOS</p>
+          <p class="site-description motion-element" itemprop="description">Java | Android | IOS</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -410,7 +462,7 @@
               
             
             
-              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Vim简介"><span class="nav-number">1.</span> <span class="nav-text">Vim简介</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Vim的工作模式"><span class="nav-number">2.</span> <span class="nav-text">Vim的工作模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Vim按键说明"><span class="nav-number">3.</span> <span class="nav-text">Vim按键说明</span></a></li></ol></div>
             
           </div>
         </section>
@@ -428,7 +480,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -437,13 +489,13 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -508,6 +560,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

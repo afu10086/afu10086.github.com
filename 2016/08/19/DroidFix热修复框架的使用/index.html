@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -45,17 +45,35 @@
   
 
   
+    
+      
+    
 
-  
-
+    
   
 
   
 
   
     
+      
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -68,7 +86,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -84,42 +102,48 @@
 
 
 
-<meta name="description" content="Clone框架并将相应的库配置到项目中
-配置工程build.gradle,将DroidFix项目中的build.gradle中的相关的配置复制到自己项目中
-生成apk文件,打正式包时选择release，打包完成会生成一个DroidPatch文件夹，里面包含有classes.md5.txt,mapping.txt二个文件，这二个文件是在打修复包时会用到，这二个文件要注意保留，因为打修复包是根据这二">
+<meta name="description" content="热修复框架的比较
+热修复作为当下热门的技术，在业界内比较著名的有阿里巴巴的AndFix、Dexposed，腾讯QQ空间的超级补丁和微信的Tinker。
+QQ空间的超级补丁热修复框架DroidFix超级补丁技术基于DEX分包方案，使用了多DEX加载的原理，大致的过程就是：把BUG方法修复以后，放到一个单独的DEX里，插入到dexElements数组的最前面，让虚拟机去加载修复完后的方法。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DroidFix热修复框架的使用">
+<meta property="og:title" content="三大修复框架比较及DroidFix热修复框架的使用">
 <meta property="og:url" content="http://yoursite.com/2016/08/19/DroidFix热修复框架的使用/index.html">
 <meta property="og:site_name" content="技术记录">
-<meta property="og:description" content="Clone框架并将相应的库配置到项目中
-配置工程build.gradle,将DroidFix项目中的build.gradle中的相关的配置复制到自己项目中
-生成apk文件,打正式包时选择release，打包完成会生成一个DroidPatch文件夹，里面包含有classes.md5.txt,mapping.txt二个文件，这二个文件是在打修复包时会用到，这二个文件要注意保留，因为打修复包是根据这二">
+<meta property="og:description" content="热修复框架的比较
+热修复作为当下热门的技术，在业界内比较著名的有阿里巴巴的AndFix、Dexposed，腾讯QQ空间的超级补丁和微信的Tinker。
+QQ空间的超级补丁热修复框架DroidFix超级补丁技术基于DEX分包方案，使用了多DEX加载的原理，大致的过程就是：把BUG方法修复以后，放到一个单独的DEX里，插入到dexElements数组的最前面，让虚拟机去加载修复完后的方法。">
+<meta property="og:image" content="http://yoursite.com/images/201609121023174918.png">
+<meta property="og:image" content="http://yoursite.com/images/201609121023194439.png">
+<meta property="og:image" content="http://yoursite.com/images/201609121023195399.png">
+<meta property="og:image" content="http://yoursite.com/images/201609121023206650.png">
+<meta property="og:image" content="http://yoursite.com/images/201609121023210430.png">
+<meta property="og:image" content="http://yoursite.com/images/201609121023212020.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/478DADCB-2EFF-4438-84E3-6199BEC30BE8.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/FD8BDC36-4C67-490F-848F-092409D6BF51.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/91EA3E5F-114D-46F9-BF15-16BFBDE579ED.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/50FAF365-CB2E-4AB1-9F8B-F5C9F0373EC5.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/74045503-F120-4D4D-B3A5-7775508A436F.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/923308A8-48DE-4C1F-9C0B-3018ECABEBD0.png">
-<meta property="og:updated_time" content="2016-08-19T08:57:57.000Z">
+<meta property="og:updated_time" content="2016-11-13T14:57:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DroidFix热修复框架的使用">
-<meta name="twitter:description" content="Clone框架并将相应的库配置到项目中
-配置工程build.gradle,将DroidFix项目中的build.gradle中的相关的配置复制到自己项目中
-生成apk文件,打正式包时选择release，打包完成会生成一个DroidPatch文件夹，里面包含有classes.md5.txt,mapping.txt二个文件，这二个文件是在打修复包时会用到，这二个文件要注意保留，因为打修复包是根据这二">
-<meta name="twitter:image" content="http://oc3lx6w3r.bkt.clouddn.com/478DADCB-2EFF-4438-84E3-6199BEC30BE8.png">
+<meta name="twitter:title" content="三大修复框架比较及DroidFix热修复框架的使用">
+<meta name="twitter:description" content="热修复框架的比较
+热修复作为当下热门的技术，在业界内比较著名的有阿里巴巴的AndFix、Dexposed，腾讯QQ空间的超级补丁和微信的Tinker。
+QQ空间的超级补丁热修复框架DroidFix超级补丁技术基于DEX分包方案，使用了多DEX加载的原理，大致的过程就是：把BUG方法修复以后，放到一个单独的DEX里，插入到dexElements数组的最前面，让虚拟机去加载修复完后的方法。">
+<meta name="twitter:image" content="http://yoursite.com/images/201609121023174918.png">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -130,10 +154,10 @@
   <link rel="canonical" href="http://yoursite.com/2016/08/19/DroidFix热修复框架的使用/"/>
 
 
-  <title> DroidFix热修复框架的使用 | 技术记录 </title>
+  <title> 三大修复框架比较及DroidFix热修复框架的使用 | 技术记录 </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -151,7 +175,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -165,7 +189,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">爱生活，爱技术,记录技术的点点滴滴</p>
+  <p class="site-subtitle">爱生活,爱技术,记录技术的点点滴滴</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -186,7 +210,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -194,7 +218,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -202,15 +226,15 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-            Tags
+            标签
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-            Schedule
+            关于
           </a>
         </li>
       
@@ -252,7 +276,7 @@
             
             
               
-                DroidFix热修复框架的使用
+                三大修复框架比较及DroidFix热修复框架的使用
               
             
           </h1>
@@ -263,7 +287,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-08-19T16:43:20+08:00" content="2016-08-19">
               2016-08-19
             </time>
@@ -292,20 +316,32 @@
       
 
       
-        <ol>
+        <h5 id="热修复框架的比较"><a href="#热修复框架的比较" class="headerlink" title="热修复框架的比较"></a>热修复框架的比较</h5><ol>
+<li>热修复作为当下热门的技术，在业界内比较著名的有阿里巴巴的AndFix、Dexposed，腾讯QQ空间的超级补丁和微信的Tinker。</li>
+<li>QQ空间的超级补丁热修复框架DroidFix<br>超级补丁技术基于DEX分包方案，使用了多DEX加载的原理，大致的过程就是：把BUG方法修复以后，放到一个单独的DEX里，插入到dexElements数组的最前面，让虚拟机去加载修复完后的方法。  <a id="more"></a>
+<img src="/images/201609121023174918.png" alt=""><br>当patch.dex中包含Test.class时就会优先加载，在后续的DEX中遇到Test.class的话就会直接返回而不去加载，这样就达到了修复的目的.<br>整体的流程图如下：<br><img src="/images/201609121023194439.png" alt=""><br>优势:<br>没有合成整包(和微信Tinker比起来)，产物比较小，比较灵活;<br>可以实现类替换，兼容性高。(某些三星手机不起作用);<br>不足:<br>不支持即时生效，必须通过重启才能生效;<br>为了实现修复这个过程，必须在应用中加入两个dex!dalvikhack.dex中只有一个类，对性能影响不大，但是对于patch.dex来说，修复的类到了一定数量，就需要花不少的时间加载。对手淘这种航母级应用来说，启动耗时增加2s以上是不能够接受的事;<br> 在ART模式下，如果类修改了结构，就会出现内存错乱的问题。为了解决这个问题，就必须把所有相关的调用类、父类子类等等全部加载到patch.dex中，导致补丁包异常的大，进一步增加应用启动加载的时候，耗时更加严重;</li>
+</ol>
+<ol>
+<li><p>微信热修复框架Tinker<br>微信针对QQ空间超级补丁技术的不足提出了一个提供DEX差量包，整体替换DEX的方案。主要的原理是与QQ空间超级补丁技术基本相同，区别在于不再将patch.dex增加到elements数组中，而是差量的方式给出patch.dex，然后将patch.dex与应用的classes.dex合并，然后整体替换掉旧的DEX文件，以达到修复的目的<br><img src="/images/201609121023195399.png" alt=""><br>整体流程如下：<br><img src="/images/201609121023206650.png" alt=""><br>优势：<br>合成整包，不用在构造函数插入代码，防止verify，verify和opt在编译期间就已经完成，不会在运行期间进行;<br>性能提高。兼容性和稳定性比较高;<br>开发者透明，不需要对包进行额外处理;<br>不足:<br>与超级补丁技术一样，不支持即时生效，必须通过重启应用的方式才能生效;<br>需要给应用开启新的进程才能进行合并，并且很容易因为内存消耗等原因合并失败;<br>合并时占用额外磁盘空间，对于多DEX的应用来说，如果修改了多个DEX文件，就需要下发多个patch.dex与对应的classes.dex进行合并操作时这种情况会更严重，因此合并过程的失败率也会更高</p>
+</li>
+<li><p>阿里热修复框架HotFix<br>阿里百川推出的热修复HotFix服务，相对于QQ空间超级补丁技术和微信Tinker来说，定位于紧急BUG修复的场景下，能够最及时的修复BUG，下拉补丁立即生效无需等待;AndFix不同于QQ空间超级补丁技术和微信Tinker通过增加或替换整个DEX的方案，提供了一种运行时在Native修改Filed指针的方式，实现方法的替换，达到即时生效无需重启，对应用无性能消耗的目的<br><img src="/images/201609121023210430.png" alt=""><br><img src="/images/201609121023212020.png" alt=""><br>优势:<br>BUG修复的即时性;<br>补丁包同样采用差量技术，生成的PATCH体积小;<br>对应用无侵入，几乎无性能损耗<br>不足:<br>不支持新增字段，以及修改<init>方法，也不支持对资源的替换;<br>由于厂商的自定义ROM，对少数机型暂不支持;</init></p>
+</li>
+</ol>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>QQ空间超级补丁技术和微信Tinker 支持新增类和资源的替换，在一些功能化的更新上更为强大，但对应用的性能和稳定会有的一定的影响;阿里百川HotFix虽然暂时不支持新增类和资源的替换，对新功能的发布也有所限制，但是作为一项定位为线上紧急BUG的热修复的服务来说，能够真正做到BUG即时修复用户无感知，同时保证对应用性能不产生不必要的损耗，在热修复方面不失为一个好的选择</p>
+<h5 id="热修复的一些问题"><a href="#热修复的一些问题" class="headerlink" title="热修复的一些问题"></a>热修复的一些问题</h5><ol>
+<li>多DEX带来的性能影响，启动时间过长<br>我们知道，多DEX方案原来是用于解决应用方法数65k的问题，现在google也官方支持了MultiDex的实现方案。超级补丁技术和Tinker却作为一种热修复的方案，平生给应用增加了多个DEX，而多DEX技术最大的问题在于性能上的坑，因此基于这种方案的补丁技术影响应用的性能是无疑的；<br>我们可以看到，超级补丁技术和Tinker都选择在Application的attachBaseContext()进行补丁dex的加载，即时这是加载dex的最佳时机，但是依然会带来很大的性能问题，首当其冲的就是启动时间太长<br>对于补丁DEX来说，应用启动时虚拟机会进行dexopt操作，将patch.dex文件转换成odex文件，这个过程本身非常耗时。而这个过程又要求在主线程中，以同步的方式执行，否则无法成功进行修复 </li>
+<li>易造成应用的ANR和Crash<br>由于多DEX加载导致了启动时间变长，这样更容易引发应用的ANR。我们知道当应用在主线程等待超过5s以后，就会直接导致长时间无响应而退出。超级补丁技术为保证ART不出现地址错乱问题，需要将所有关联的类全部加入到补丁中，而微信Tinker采取一种差量包合并加载的方式，都会使要加载的DEX体积变得很大。这也很大程度上容易导致ANR情况的出现；<br>除了应用ANR以外，多DEX模式也同样很容易导致Crash情况的出现。在ART设备中为了保证不出现地址错乱，需要把修改类的所有相关类全部加入到补丁中，这里会出现一个问题，为了保证补丁包的体积最小，能否保证引入全部的关联类而不引入无关的类呢?一旦没有引入关联的类，就会出现以下的异常；<br>· NoClassDefFoundError<br>· Could Not Find Class<br>· Could Not Find Method<br>出现这些异常，就会直接导致应用的Crash退出。<br>所以，不难看出如果我们需要修复一个不是Crash的BUG，但是因为未加入相关类而导致了更严重的Crash，就更加的得不偿失  </li>
+</ol>
+<h5 id="DroidFix热修复框架的使用"><a href="#DroidFix热修复框架的使用" class="headerlink" title="DroidFix热修复框架的使用"></a>DroidFix热修复框架的使用</h5><ol>
 <li>Clone框架并将相应的库配置到项目中<br><img src="http://oc3lx6w3r.bkt.clouddn.com/478DADCB-2EFF-4438-84E3-6199BEC30BE8.png" alt="Andrid"></li>
 <li>配置工程build.gradle,将DroidFix项目中的build.gradle中的相关的配置复制到自己项目中<br><img src="http://oc3lx6w3r.bkt.clouddn.com/FD8BDC36-4C67-490F-848F-092409D6BF51.png" alt="Android"></li>
 <li>生成apk文件,打正式包时选择release，打包完成会生成一个DroidPatch文件夹，里面包含有classes.md5.txt,mapping.txt二个文件，这二个文件是在打修复包时会用到，这二个文件要注意保留，因为打修复包是根据这二个文件中的配置来生成patch.apk文件的<br><img src="http://oc3lx6w3r.bkt.clouddn.com/91EA3E5F-114D-46F9-BF15-16BFBDE579ED.png" alt="Android"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/50FAF365-CB2E-4AB1-9F8B-F5C9F0373EC5.png" alt="Android"></li>
 <li>打修复包，此时生成的patch.apk文件就热修复的apk，将其放在服务器上然后下载下来就可使用<br><img src="http://oc3lx6w3r.bkt.clouddn.com/74045503-F120-4D4D-B3A5-7775508A436F.png" alt="Android"></li>
 <li>在application中加入相应的代码，在打开app时跟后台交互查看些版本的app是否有patch.apk文件，有则下载下来当下次再打开app时就会加载patch.apk文件到内存，以此达到修复bug的文件<br><img src="http://oc3lx6w3r.bkt.clouddn.com/923308A8-48DE-4C1F-9C0B-3018ECABEBD0.png" alt="Android"></li>
-</ol>
-<h5 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h5><ol>
-<li>此修复办法只能在再次打开app时生效，所以如果用户在一打开app就崩溃时是无法达到修复目的的，因为patch.apk文件还没下载到本地.</li>
-<li>此修复只能针对java文件，不能对资源文件进行修复</li>
+<li>注意事项<br>此修复办法只能在再次打开app时生效，所以如果用户在一打开app就崩溃时是无法达到修复目的的，因为patch.apk文件还没下载到本地;<br>此修复只能针对java文件，不能对资源文件进行修复</li>
 </ol>
 <h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
 <li><a href="https://zhuanlan.zhihu.com/p/20308548" target="_blank" rel="external">热修复原理</a></li>
-<li><a href="http://blog.zhaiyifan.cn/2015/11/20/HotPatchCompare/" target="_blank" rel="external">各种热修复框架的比较</a></li>
 <li><a href="https://github.com/bunnyblue/DroidFix" target="_blank" rel="external">DroidFix框架</a></li>
 </ol>
 
@@ -327,6 +363,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+        </div>
       
 
       
@@ -392,10 +434,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -403,21 +445,28 @@
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://oc3lx6w3r.bkt.clouddn.com/meImage.jpg"
                alt="福" />
           <p class="site-author-name" itemprop="name">福</p>
-          <p class="site-description motion-element" itemprop="description">LiDaofu's blog| 爱生活，爱技术 | Java | Android | IOS</p>
+          <p class="site-description motion-element" itemprop="description">Java | Android | IOS</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -443,7 +492,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#注意事项："><span class="nav-number">1.</span> <span class="nav-text">注意事项：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考资料"><span class="nav-number">2.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#热修复框架的比较"><span class="nav-number">1.</span> <span class="nav-text">热修复框架的比较</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#热修复的一些问题"><span class="nav-number">3.</span> <span class="nav-text">热修复的一些问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DroidFix热修复框架的使用"><span class="nav-number">4.</span> <span class="nav-text">DroidFix热修复框架的使用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
         </section>
@@ -461,7 +510,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -470,13 +519,13 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -541,6 +590,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

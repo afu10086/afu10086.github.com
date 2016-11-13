@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -45,17 +45,35 @@
   
 
   
+    
+      
+    
 
-  
-
+    
   
 
   
 
   
     
+      
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -68,7 +86,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android,Linux," />
 
 
 
@@ -84,18 +102,12 @@
 
 
 
-<meta name="description" content="adb shell常用命令首先通过连接手机通过adb shell命令进入到shell环境
-1.adb shell ps:查看进程信息
-2.adb shell service list:查看后台运行的所有服务
-3.adb shell dumpsys [options] ：输出options的信息通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息常用的一般是d">
+<meta name="description" content="adb shell常用命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Adb常用命令">
 <meta property="og:url" content="http://yoursite.com/2016/08/18/Adb常用命令/index.html">
 <meta property="og:site_name" content="技术记录">
-<meta property="og:description" content="adb shell常用命令首先通过连接手机通过adb shell命令进入到shell环境
-1.adb shell ps:查看进程信息
-2.adb shell service list:查看后台运行的所有服务
-3.adb shell dumpsys [options] ：输出options的信息通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息常用的一般是d">
+<meta property="og:description" content="adb shell常用命令">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/AB5335A2-111E-46F9-9ED5-0A8EDD64C4CD.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/FFBA38ED-F64A-4B7A-A5B0-4E25BC2A0219.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/960AA3B8-0FC7-4E61-BFC9-69FE216F8C5D.png">
@@ -117,13 +129,10 @@
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/614BACFF-8A38-470E-85A4-C907F5560083.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/086D46A1-CCB3-4603-BEF3-529815722D1E.png">
 <meta property="og:image" content="http://oc3lx6w3r.bkt.clouddn.com/509F0CD9-428B-4FA2-A882-EF0BF490ED17.png">
-<meta property="og:updated_time" content="2016-08-19T03:47:05.000Z">
+<meta property="og:updated_time" content="2016-11-13T14:56:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Adb常用命令">
-<meta name="twitter:description" content="adb shell常用命令首先通过连接手机通过adb shell命令进入到shell环境
-1.adb shell ps:查看进程信息
-2.adb shell service list:查看后台运行的所有服务
-3.adb shell dumpsys [options] ：输出options的信息通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息常用的一般是d">
+<meta name="twitter:description" content="adb shell常用命令">
 <meta name="twitter:image" content="http://oc3lx6w3r.bkt.clouddn.com/AB5335A2-111E-46F9-9ED5-0A8EDD64C4CD.png">
 
 
@@ -131,13 +140,13 @@
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"right","display":"always"},
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -151,7 +160,7 @@
   <title> Adb常用命令 | 技术记录 </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -169,7 +178,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right page-post-detail ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -183,7 +192,7 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">爱生活，爱技术,记录技术的点点滴滴</p>
+  <p class="site-subtitle">爱生活,爱技术,记录技术的点点滴滴</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -204,7 +213,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -212,7 +221,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -220,15 +229,15 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-            Tags
+            标签
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
             
-            Schedule
+            关于
           </a>
         </li>
       
@@ -281,7 +290,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-08-18T22:58:32+08:00" content="2016-08-18">
               2016-08-18
             </time>
@@ -310,7 +319,8 @@
       
 
       
-        <h3 id="adb-shell常用命令"><a href="#adb-shell常用命令" class="headerlink" title="adb shell常用命令"></a>adb shell常用命令</h3><p>首先通过连接手机通过adb shell命令进入到shell环境<br><img src="http://oc3lx6w3r.bkt.clouddn.com/AB5335A2-111E-46F9-9ED5-0A8EDD64C4CD.png" alt="adb_shell"></p>
+        <h3 id="adb-shell常用命令"><a href="#adb-shell常用命令" class="headerlink" title="adb shell常用命令"></a>adb shell常用命令</h3><a id="more"></a>
+<p>首先通过连接手机通过adb shell命令进入到shell环境<br><img src="http://oc3lx6w3r.bkt.clouddn.com/AB5335A2-111E-46F9-9ED5-0A8EDD64C4CD.png" alt="adb_shell"></p>
 <p>1.adb shell ps:查看进程信息<br><img src="http://oc3lx6w3r.bkt.clouddn.com/FFBA38ED-F64A-4B7A-A5B0-4E25BC2A0219.png" alt="adb_shell"></p>
 <p>2.adb shell service list:查看后台运行的所有服务<br><img src="http://oc3lx6w3r.bkt.clouddn.com/960AA3B8-0FC7-4E61-BFC9-69FE216F8C5D.png" alt="adb_shell"></p>
 <p>3.adb shell dumpsys [options] ：输出options的信息<br>通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息<br>常用的一般是dumpsys activity top 命令来查看正在运行的app信息<br><img src="http://oc3lx6w3r.bkt.clouddn.com/F975F70B-993D-4EB8-B5BA-F193F8386253.png" alt="adb"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/D98CEE0D-783A-4B7E-ADA0-BF3D6FF67F20.png" alt="adb_shell"><br>4.adb shell screen cap <filename>:截屏，将图片存储在filename文件夹下<br><img src="http://oc3lx6w3r.bkt.clouddn.com/3DE79171-1AC4-44E9-9FD4-1F3D35730357.png" alt="adb_shell"><br>5.adb shell pm list packages [options]:查看包名<br>-f:所有安装的app包名<br>-s:安装的系统包名<br>-i:已经安装的app包名<br>-u:安装和未安装的所有app包名<br><img src="http://oc3lx6w3r.bkt.clouddn.com/79D93CD5-3FE5-4D00-9182-E5FDD8A4FF01.png" alt="adb_shell"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/F884B2AD-296F-41C4-8613-054C9D1971C2.png" alt="adb"><br>6.adb shell pm clear <package>:清除package所属的app的所有数据<br><img src="http://oc3lx6w3r.bkt.clouddn.com/EF645A0A-9A09-4FC7-8847-FA9629B2E75C.png" alt="adb_shell"><br>7.adb shell pm path <package>:显示package所属app所在的路径<br><img src="http://oc3lx6w3r.bkt.clouddn.com/2156226B-8C53-4EDC-8A92-18A675D8B80C.png" alt="adb_shell"><br>8.adb shell的其它命令与linux的一些命令的使用方法一样，因为android是基于linux开发的<br><img src="http://oc3lx6w3r.bkt.clouddn.com/E7E4AADE-2AB2-4FD6-A7B2-9A08B642C36B.png" alt="adb_shell"><br>9.monkey:压力测试<br>-p:测试的包名<br>-v:是否打印测试信息<br><img src="http://oc3lx6w3r.bkt.clouddn.com/BE770E2C-99F5-4809-BF08-D7A34601F294.png" alt="adb"></package></package></filename></p>
@@ -339,6 +349,14 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+        </div>
       
 
       
@@ -404,10 +422,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -415,21 +433,28 @@
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="http://oc3lx6w3r.bkt.clouddn.com/meImage.jpg"
                alt="福" />
           <p class="site-author-name" itemprop="name">福</p>
-          <p class="site-description motion-element" itemprop="description">LiDaofu's blog| 爱生活，爱技术 | Java | Android | IOS</p>
+          <p class="site-description motion-element" itemprop="description">Java | Android | IOS</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -473,7 +498,7 @@
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
+  &copy;  2014 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -482,13 +507,13 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -553,6 +578,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
