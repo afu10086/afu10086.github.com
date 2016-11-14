@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Vim编辑器的使用]]></title>
+      <url>http://yoursite.com/2016/08/22/Vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h5 id="Vim简介"><a href="#Vim简介" class="headerlink" title="Vim简介"></a>Vim简介</h5><p>Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具<br><a id="more"></a></p>
+<h5 id="Vim的工作模式"><a href="#Vim的工作模式" class="headerlink" title="Vim的工作模式"></a>Vim的工作模式</h5><p>基本上 vi/vim 共分为三种模式，分别是一般模式、编辑模式与指令列命令模式。 这三种模式的作用分别是:  </p>
+<ol>
+<li>一般模式：<br>以 vi 打开一个档案就直接进入一般模式了(这是默认的模式)。在这个模式中， 你可以使用『上下左右』按键来移动光标，你可以使用『删除字符』或『删除整行』来处理档案内容， 也可以使用『复制、贴上』来处理你的文件数据  </li>
+<li>编辑模式：<br>在一般模式中可以进行删除、复制、贴上等等的动作，但是却无法编辑文件内容的！ 要等到你按下『i, I, o, O, a, A, r, R』等任何一个字母之后才会进入编辑模式。注意了！通常在 Linux 中，按下这些按键时，在画面的左下方会出现『INSERT 或 REPLACE 』的字样，此时才可以进行编辑。而如果要回到一般模式时， 则必须要按下『Esc』这个按键即可退出编辑模式  </li>
+<li>指令列命令模式：<br>在一般模式当中，输入『 : / ? 』三个中的任何一个按钮，就可以将光标移动到最底下那一行。在这个模式当中， 可以提供你『搜寻资料』的动作，而读取、存盘、大量取代字符、离开 vi 、显示行号等等的动作则是在此模式中达成的<br>简单的说，我们可以将这三个模式想成底下的图标来表示:<br><img src="/images/vim_model.png" alt=""></li>
+</ol>
+<h5 id="Vim按键说明"><a href="#Vim按键说明" class="headerlink" title="Vim按键说明"></a>Vim按键说明</h5><ol>
+<li><p>一般模式可用的按钮说明，光标移动、复制粘贴、搜寻取代等<br>vi可以直接用键盘上的光标来上下左右移动，但正规的vi是用小写英文字母「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格<br>「ctrl」+「b」：屏幕往“后”移动一页<br>「ctrl」+「f」：屏幕往“前”移动一页<br>「ctrl」+「u」：屏幕往“后”移动半页<br>「ctrl」+「d」：屏幕往“前”移动半页<br>「ctrl+$」：移动到光标所在行的“行尾”<br>「ctrl+^」：移动到光标所在行的“行首”<br>「w」：光标跳到下个字的开头<br>「e」：光标跳到下个字的字尾<br>「b」：光标回到上个字的开头<br>「#l」：光标移到该行的第#个位置，如：5l,56l<br>查找关键字：<br>「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止<br>「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止<br>跳到文件中的某一行：<br>「#」：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行<br>删除：<br>「x」：每按一次，删除光标所在位置的“后面”一个字符<br>「#x」：例如，「6x」表示删除光标所在位置的“后面”6个字符<br>「X」：大写的X，每按一次，删除光标所在位置的“前面”一个字符<br>「#X」：例如，「20X」表示删除光标所在位置的“前面”20个字符<br>「dd」：删除光标所在行<br>「#dd」：从光标所在行开始删除#行<br>复制与粘贴：<br>「yw」：将光标所在之处到字尾的字符复制到缓冲区中<br>「#yw」：复制#个字到缓冲区<br>「yy」：复制光标所在行到缓冲区<br>「#yy」：例如，「6yy」表示拷贝从光标所在的该行“往下数”6行文字<br>「p」：将缓冲区内的字符贴到光标所在位置。注意：所有与“y”有关的复制命令都必须与“p”配合才能完成复制与粘贴功能</p>
+</li>
+<li><p>一般模式切换到编辑模式的可用的按钮说明<br>[i]：进入插入编辑模式，用户可以对文件进行编辑修改<br>[ESC]：退出编辑模式，进入一般模式</p>
+</li>
+<li><p>一般模式切换到指令列模式的可用的按钮说明<br>「w」：在冒号输入字母「w」就可以将文件保存起来<br>「q」：按「q」就是退出，如果无法离开vi，可以在「q」后跟一个「!」强制离开vi<br>「qw」：保存文件并退出，搭配「w」一起使用，这样在退出的时候还可以保存文件<br>[q!]：若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案</p>
+</li>
+<li><p>vim 环境的变更，在一般模式下输入[:]再输入<br>[set nu]：显示行号，设定之后，会在每一行的前缀显示该行的行号<br>[set nonu]：与 set nu 相反，为取消行号！</p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Linux学习及常用命令]]></title>
+      <url>http://yoursite.com/2016/08/22/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<h5 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h5><p>Linux是一套免费使用和自由传播的类Unix操作系统，是一个基于POSIX和UNIX的多用户、多任务、支持多线程和多CPU的操作系统。<br>Linux能运行主要的UNIX工具软件、应用程序和网络协议。它支持32位和64位硬件。Linux继承了Unix以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统<br><a id="more"></a></p>
+<h5 id="Linux知识点"><a href="#Linux知识点" class="headerlink" title="Linux知识点"></a>Linux知识点</h5><ol>
+<li><p>Linux目录结构<br><img src="/images/003vPl7Rty6E8kZRlAEdc690.jpg" alt=""><br>/bin: bin是Binary的缩写, 这个目录存放着最经常使用的命令<br>/boot: 这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件<br>/dev: dev是Device(设备)的缩写, 该目录下存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的<br>/etc: 这个目录用来存放所有的系统管理所需要的配置文件和子目录<br>/home: 用户的主目录，在Linux中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的<br>/lib:  这个目录里存放着系统最基本的动态连接共享库，其作用类似于Windows里的DLL文件,几乎所有的应用程序都需要用到这些共享库<br>/lost+found: 这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件<br>/mnt: 系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在/mnt/上，然后进入该目录就可以查看光驱里的内容了<br>/opt:  这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的<br>/proc: 这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息,这个目录的内容不在硬盘上而是在内存里，我们也可以直接修改里面的某些文件<br>/root: 该目录为系统管理员，也称作超级权限者的用户主目录<br>/sbin:  s就是Super User的意思，这里存放的是系统管理员使用的系统管理程序<br>/selinux: 这个目录是Redhat/CentOS所特有的目录，Selinux是一个安全机制，类似于windows的防火墙，但是这套机制比较复杂，这个目录就是存放selinux相关的文件的<br>/srv: 该目录存放一些服务启动之后需要提取的数据<br>/tmp: 这个目录是用来存放一些临时文件的<br>/usr: 这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似与windows下的program files目录<br>/usr/bin: 系统用户使用的应用程序<br>/usr/sbin: 超级用户使用的比较高级的管理程序和系统守护程序<br>/usr/src: 内核源代码默认的放置目录<br>/var: 这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下,包括各种日志文件<br>在linux系统中，有几个目录是比较重要的，平时需要注意不要误删除或者随意更改内部文件,/etc：这个是系统中的配置文件，如果你更改了该目录下的某个文件可能会导致系统不能启动;/bin, /sbin, /usr/bin, /usr/sbin: 这是系统预设的执行文件的放置目录，比如 ls 就是在/bin/ls 目录下的;值得提出的是，/bin, /usr/bin 是给系统用户使用的指令（除root外的通用户），而/sbin, /usr/sbin 则是给root使用的指令;/var： 这是一个非常重要的目录，系统上跑了很多程序，那么每个程序都会有相应的日志产生，而这些日志就被记录到这个目录下，具体在/var/log 目录下，另外mail的预设放置也是在这里</p>
+</li>
+<li><p>Linux文件属性<br>Linux系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定;<br><img src="/images/563F12FF-7CD8-4584-9130-45D1A584D83D.png" alt=""><br><img src="/images/363003_1227493859FdXT.png" alt=""><br>从左至右用0-9这些数字来表示,第0位确定文件类型，第1-3位确定属主（该文件的所有者）拥有该文件的权限;第4-6位确定属组（所有者的同组用户）拥有该文件的权限，第7-9位确定其他用户拥有该文件的权限;其中，第1、4、7位表示读权限，如果用”r”字符表示，则有读权限，如果用”-“字符表示，则没有读权限;第2、5、8位表示写权限，如果用”w”字符表示，则有写权限，如果用”-“字符表示没有写权限；第3、6、9位表示可执行权限,如果用”x”字符表示，则有执行权限，如果用”-“字符表示，则没有执行权限。<br>对于文件来说，它都有一个特定的所有者，也就是对该文件具有所有权的用户。同时，在Linux系统中，用户是按组分类的，一个用户属于一个或多个组。文件所有者以外的用户又可以分为文件所有者的同组用户和其他用户。因此，Linux系统按文件所有者、文件所有者同组用户和其他用户来规定了不同的文件访问权限。在以上实例中，bin文件是一个目录文件，属主和属组都为root，属主有可读、可写、可执行的权限；与属主同组的其他用户有可读和可执行的权限；其他用户也有可读和可执行的权限<br>Linux文件属性有两种设置方法，一种是数字，一种是符号<br>Linux文件的基本权限就有九个，分别是owner/group/others三种身份各有自己的read/write/execute权限。<br>先复习一下刚刚上面提到的数据：文件的权限字符为：『-rwxrwxrwx』， 这九个权限是三个三个一组的！其中，我们可以使用数字来代表各个权限，各权限的分数对照表如下：<br>r:4<br>w:2<br>x:1<br>每种身份(owner/group/others)各自的三个权限(r/w/x)分数是需要累加的，例如当权限为：[-rwxrwx—] 分数则是：<br>owner = rwx = 4+2+1 = 7<br>group = rwx = 4+2+1 = 7<br>others= — = 0+0+0 = 0<br>所以等一下我们设定权限的变更时，该文件的权限数字就是770啦！变更权限的指令chmod的语法是这样的:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">chmod [-R] xyz :修改文件属性</div><div class="line">xyz : 就是刚刚提到的数字类型的权限属性，为 rwx 属性数值的相加</div><div class="line">-R : 进行递归(recursive)的持续变更，亦即连同次目录下的所有文件都会变更</div><div class="line">eg: chmod -R 777 lidaofu 将lidaofu目录下的权限全部启用</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">touch [args]:创建一个新文件</div><div class="line">eg: touch &quot;lidaofu.txt&quot;:创建一个lidaofu.txt的文件</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">man [args]:显示指定命令的帮助信息</div><div class="line">eg: man ls:显示ls命令的帮助信息</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cat [options:-n] [args]:显示文件的内容,参数n表示显示行号</div><div class="line">eg: cat -n /user/lidaofu.txt:显示lidaofu.txt这个文件并显示行号</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">ls [options:-a,-l,-d,-t,-R][args]:显示指定目录</div><div class="line">-a（all):显示所有的文件和子目录，包括隐藏文件和隐藏子目录  </div><div class="line">-l（list):显示文件和子目录的列表信息</div><div class="line">-d（directory):如果参数是目录，只显示目录的信息</div><div class="line">-t（time):按照时间顺序显示文件</div><div class="line">-R（recursive):不仅显示指定目录下的文件和子目录信息，而且递归地显示子目录中的文件和子目录信息</div><div class="line">eg: ls -al /home :显示home目录下的所有文件，包含隐藏的文件</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp [args1] [args2]:复制文件</div><div class="line">eg: cp haproxy-1.4.24.tar.gz /usr/src/ 将文件复制到/usr/src目录下</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">rm [options][args]:删除文件或目录</div><div class="line">-d或--directory:直接把欲删除的目录的硬连接数据删成0，删除该目录。</div><div class="line">-f或--force:强制删除文件或目录。</div><div class="line">-r或-R或--recursive:递归处理，将指定目录下的所有文件及子目录一并处理。</div><div class="line">-i或--interactive:删除既有文件或目录之前先询问用户。</div><div class="line">-v或--verbose: 显示指令执行过程</div><div class="line">eg: rm haproxy-1.4.24.tar.gz 删除文件</div><div class="line">eg: rm -rf /lidaofu/test 强制删除test目录及子文件</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd [args]:改变工作目录</div><div class="line">cd .. : 切换到父目录</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir [args]:创建目录</div><div class="line">eg: mkdir /lidaofu/test </div><div class="line">eg: mkdir -p /lidaofu/test/a 新建多级不存在的目录</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pwd :显示当前目录的绝对路径</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ifconfig :显示网络接口信息</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">su :变更用户身份</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[加密技术]]></title>
+      <url>http://yoursite.com/2016/08/21/%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF/</url>
+      <content type="html"><![CDATA[<h4 id="对称加密"><a href="#对称加密" class="headerlink" title="对称加密"></a>对称加密</h4><blockquote>
+<p>对称加密算法是应用较早的加密算法，技术成熟。在对称加密算法中，数据发信方将明文（原始数据）和加密密钥一起经过特殊加密算法处理后，使其变成复杂的加密密文发送出去。收信方收到密文后，若想解读原文，则需要使用加密用过的密钥及相同算法的逆算法对密文进行解密，才能使其恢复成可读明文。在对称加密算法中，使用的密钥只有一个，发收信双方都使用这个密钥对数据进行加密和解密，这就要求解密方事先必须知道加密密钥。<br><a id="more"></a></p>
+<ul>
+<li>对称加密算法的特点是算法公开、计算量小、加密速度快、加密效率高</li>
+<li>不足之处是，交易双方都使用同样钥匙，安全性得不到保证</li>
+<li>常见加密算法，DES,AES,3DES,TDEA等<br><img src="http://oc3lx6w3r.bkt.clouddn.com/BB49DD66-557E-4099-9A69-AFDF074673B0.png" alt="pic"></li>
+</ul>
+</blockquote>
+<h4 id="非对称加密"><a href="#非对称加密" class="headerlink" title="非对称加密"></a>非对称加密</h4><blockquote>
+<p>对称加密算法在加密和解密时使用的是同一个秘钥；而非对称加密算法需要两个密钥来进行加密和解密，这两个秘钥是公开密钥（public key，简称公钥）和私有密钥（private key，简称私钥）</p>
+<ul>
+<li>非对称加密与对称加密相比，其安全性更好</li>
+<li>非对称加密的缺点是加密和解密花费时间长、速度慢，只适合对少量数据进行加密</li>
+<li>常见算法，RSA、Elgamal、背包算法、Rabin、D-H、ECC等</li>
+</ul>
+</blockquote>
+<h4 id="Hash算法"><a href="#Hash算法" class="headerlink" title="Hash算法"></a>Hash算法</h4><blockquote>
+<ul>
+<li>定义：单向散列函数算法也称Hash(哈希)算法，是一种将任意长度的消息压缩到某一固定长度(消息摘要)的函数(该过程不可逆)。Hash函数可用于数字签名，消息的完整性检测，消息起源的认证检测等</li>
+<li>易变性：即使原始信息发生1bit的变化，hash的输出也将会有不可预知的巨大变化</li>
+<li>不可逆性：通过Hash结果构造出满足的输入信息是不可能的或者及其困难的</li>
+<li>常见的散列算法：MD5,SHA,RIPE-MD,HAVAL,N-Hash等</li>
+<li>MD5：消息摘要算法，它对输入的做任意长度的消息进行运算，产生一个128位的消息摘要</li>
+<li>SHA：安全散列算法，有SHA-1,SHA-256,SHA-384,SHA-512几种，分别产生160位，256位，384位，512位的散列值</li>
+<li>Hash算法的应用场景：防篡改，防损坏，认证,电子签名等</li>
+</ul>
+<ol>
+<li>防篡改<br><img src="http://oc3lx6w3r.bkt.clouddn.com/876260C1-8B27-476B-8398-F0FC4FFC5154.png" alt="pic"></li>
+<li>防损坏<br><img src="http://oc3lx6w3r.bkt.clouddn.com/72BC06A9-3699-4853-9BA3-A78A9CE1A6E1.png" alt="pic"></li>
+<li>认证<br><img src="http://oc3lx6w3r.bkt.clouddn.com/646C55D3-9F9E-4FAF-8370-28A75A9F3CB5.png" alt="pic"></li>
+<li>电子签名<br><img src="http://oc3lx6w3r.bkt.clouddn.com/64B17681-BCB9-49AA-BD3E-C877544E6533.png" alt="pic"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/A14D0EC1-B744-4031-A906-67FC3ADD6DF1.png" alt="pic"></li>
+</ol>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[三大修复框架比较及DroidFix热修复框架的使用]]></title>
+      <url>http://yoursite.com/2016/08/19/DroidFix%E7%83%AD%E4%BF%AE%E5%A4%8D%E6%A1%86%E6%9E%B6%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h5 id="热修复框架的比较"><a href="#热修复框架的比较" class="headerlink" title="热修复框架的比较"></a>热修复框架的比较</h5><ol>
+<li>热修复作为当下热门的技术，在业界内比较著名的有阿里巴巴的AndFix、Dexposed，腾讯QQ空间的超级补丁和微信的Tinker。</li>
+<li>QQ空间的超级补丁热修复框架DroidFix<br>超级补丁技术基于DEX分包方案，使用了多DEX加载的原理，大致的过程就是：把BUG方法修复以后，放到一个单独的DEX里，插入到dexElements数组的最前面，让虚拟机去加载修复完后的方法。  <a id="more"></a>
+<img src="/images/201609121023174918.png" alt=""><br>当patch.dex中包含Test.class时就会优先加载，在后续的DEX中遇到Test.class的话就会直接返回而不去加载，这样就达到了修复的目的.<br>整体的流程图如下：<br><img src="/images/201609121023194439.png" alt=""><br>优势:<br>没有合成整包(和微信Tinker比起来)，产物比较小，比较灵活;<br>可以实现类替换，兼容性高。(某些三星手机不起作用);<br>不足:<br>不支持即时生效，必须通过重启才能生效;<br>为了实现修复这个过程，必须在应用中加入两个dex!dalvikhack.dex中只有一个类，对性能影响不大，但是对于patch.dex来说，修复的类到了一定数量，就需要花不少的时间加载。对手淘这种航母级应用来说，启动耗时增加2s以上是不能够接受的事;<br> 在ART模式下，如果类修改了结构，就会出现内存错乱的问题。为了解决这个问题，就必须把所有相关的调用类、父类子类等等全部加载到patch.dex中，导致补丁包异常的大，进一步增加应用启动加载的时候，耗时更加严重;</li>
+</ol>
+<ol>
+<li><p>微信热修复框架Tinker<br>微信针对QQ空间超级补丁技术的不足提出了一个提供DEX差量包，整体替换DEX的方案。主要的原理是与QQ空间超级补丁技术基本相同，区别在于不再将patch.dex增加到elements数组中，而是差量的方式给出patch.dex，然后将patch.dex与应用的classes.dex合并，然后整体替换掉旧的DEX文件，以达到修复的目的<br><img src="/images/201609121023195399.png" alt=""><br>整体流程如下：<br><img src="/images/201609121023206650.png" alt=""><br>优势：<br>合成整包，不用在构造函数插入代码，防止verify，verify和opt在编译期间就已经完成，不会在运行期间进行;<br>性能提高。兼容性和稳定性比较高;<br>开发者透明，不需要对包进行额外处理;<br>不足:<br>与超级补丁技术一样，不支持即时生效，必须通过重启应用的方式才能生效;<br>需要给应用开启新的进程才能进行合并，并且很容易因为内存消耗等原因合并失败;<br>合并时占用额外磁盘空间，对于多DEX的应用来说，如果修改了多个DEX文件，就需要下发多个patch.dex与对应的classes.dex进行合并操作时这种情况会更严重，因此合并过程的失败率也会更高</p>
+</li>
+<li><p>阿里热修复框架HotFix<br>阿里百川推出的热修复HotFix服务，相对于QQ空间超级补丁技术和微信Tinker来说，定位于紧急BUG修复的场景下，能够最及时的修复BUG，下拉补丁立即生效无需等待;AndFix不同于QQ空间超级补丁技术和微信Tinker通过增加或替换整个DEX的方案，提供了一种运行时在Native修改Filed指针的方式，实现方法的替换，达到即时生效无需重启，对应用无性能消耗的目的<br><img src="/images/201609121023210430.png" alt=""><br><img src="/images/201609121023212020.png" alt=""><br>优势:<br>BUG修复的即时性;<br>补丁包同样采用差量技术，生成的PATCH体积小;<br>对应用无侵入，几乎无性能损耗<br>不足:<br>不支持新增字段，以及修改<init>方法，也不支持对资源的替换;<br>由于厂商的自定义ROM，对少数机型暂不支持;</init></p>
+</li>
+</ol>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>QQ空间超级补丁技术和微信Tinker 支持新增类和资源的替换，在一些功能化的更新上更为强大，但对应用的性能和稳定会有的一定的影响;阿里百川HotFix虽然暂时不支持新增类和资源的替换，对新功能的发布也有所限制，但是作为一项定位为线上紧急BUG的热修复的服务来说，能够真正做到BUG即时修复用户无感知，同时保证对应用性能不产生不必要的损耗，在热修复方面不失为一个好的选择</p>
+<h5 id="热修复的一些问题"><a href="#热修复的一些问题" class="headerlink" title="热修复的一些问题"></a>热修复的一些问题</h5><ol>
+<li>多DEX带来的性能影响，启动时间过长<br>我们知道，多DEX方案原来是用于解决应用方法数65k的问题，现在google也官方支持了MultiDex的实现方案。超级补丁技术和Tinker却作为一种热修复的方案，平生给应用增加了多个DEX，而多DEX技术最大的问题在于性能上的坑，因此基于这种方案的补丁技术影响应用的性能是无疑的；<br>我们可以看到，超级补丁技术和Tinker都选择在Application的attachBaseContext()进行补丁dex的加载，即时这是加载dex的最佳时机，但是依然会带来很大的性能问题，首当其冲的就是启动时间太长<br>对于补丁DEX来说，应用启动时虚拟机会进行dexopt操作，将patch.dex文件转换成odex文件，这个过程本身非常耗时。而这个过程又要求在主线程中，以同步的方式执行，否则无法成功进行修复 </li>
+<li>易造成应用的ANR和Crash<br>由于多DEX加载导致了启动时间变长，这样更容易引发应用的ANR。我们知道当应用在主线程等待超过5s以后，就会直接导致长时间无响应而退出。超级补丁技术为保证ART不出现地址错乱问题，需要将所有关联的类全部加入到补丁中，而微信Tinker采取一种差量包合并加载的方式，都会使要加载的DEX体积变得很大。这也很大程度上容易导致ANR情况的出现；<br>除了应用ANR以外，多DEX模式也同样很容易导致Crash情况的出现。在ART设备中为了保证不出现地址错乱，需要把修改类的所有相关类全部加入到补丁中，这里会出现一个问题，为了保证补丁包的体积最小，能否保证引入全部的关联类而不引入无关的类呢?一旦没有引入关联的类，就会出现以下的异常；<br>· NoClassDefFoundError<br>· Could Not Find Class<br>· Could Not Find Method<br>出现这些异常，就会直接导致应用的Crash退出。<br>所以，不难看出如果我们需要修复一个不是Crash的BUG，但是因为未加入相关类而导致了更严重的Crash，就更加的得不偿失  </li>
+</ol>
+<h5 id="DroidFix热修复框架的使用"><a href="#DroidFix热修复框架的使用" class="headerlink" title="DroidFix热修复框架的使用"></a>DroidFix热修复框架的使用</h5><ol>
+<li>Clone框架并将相应的库配置到项目中<br><img src="http://oc3lx6w3r.bkt.clouddn.com/478DADCB-2EFF-4438-84E3-6199BEC30BE8.png" alt="Andrid"></li>
+<li>配置工程build.gradle,将DroidFix项目中的build.gradle中的相关的配置复制到自己项目中<br><img src="http://oc3lx6w3r.bkt.clouddn.com/FD8BDC36-4C67-490F-848F-092409D6BF51.png" alt="Android"></li>
+<li>生成apk文件,打正式包时选择release，打包完成会生成一个DroidPatch文件夹，里面包含有classes.md5.txt,mapping.txt二个文件，这二个文件是在打修复包时会用到，这二个文件要注意保留，因为打修复包是根据这二个文件中的配置来生成patch.apk文件的<br><img src="http://oc3lx6w3r.bkt.clouddn.com/91EA3E5F-114D-46F9-BF15-16BFBDE579ED.png" alt="Android"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/50FAF365-CB2E-4AB1-9F8B-F5C9F0373EC5.png" alt="Android"></li>
+<li>打修复包，此时生成的patch.apk文件就热修复的apk，将其放在服务器上然后下载下来就可使用<br><img src="http://oc3lx6w3r.bkt.clouddn.com/74045503-F120-4D4D-B3A5-7775508A436F.png" alt="Android"></li>
+<li>在application中加入相应的代码，在打开app时跟后台交互查看些版本的app是否有patch.apk文件，有则下载下来当下次再打开app时就会加载patch.apk文件到内存，以此达到修复bug的文件<br><img src="http://oc3lx6w3r.bkt.clouddn.com/923308A8-48DE-4C1F-9C0B-3018ECABEBD0.png" alt="Android"></li>
+<li>注意事项<br>此修复办法只能在再次打开app时生效，所以如果用户在一打开app就崩溃时是无法达到修复目的的，因为patch.apk文件还没下载到本地;<br>此修复只能针对java文件，不能对资源文件进行修复</li>
+</ol>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/20308548" target="_blank" rel="external">热修复原理</a></li>
+<li><a href="https://github.com/bunnyblue/DroidFix" target="_blank" rel="external">DroidFix框架</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android单元测试]]></title>
+      <url>http://yoursite.com/2016/08/19/Android%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</url>
+      <content type="html"><![CDATA[<h4 id="Android中的单元测试"><a href="#Android中的单元测试" class="headerlink" title="Android中的单元测试"></a>Android中的单元测试</h4><p>在Android Studio中进行单元测试并不需要什么插件或者过多的配置，Android Studio本身就集成了测试环境，无论是单纯的java代码单元测试还是依赖Android SDK的Android代码单元测试，都能得心应手<br><a id="more"></a><br><img src="http://oc3lx6w3r.bkt.clouddn.com/79FE0BB0-EDE3-4487-A1FF-B5142494FC53.png" alt="Android"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/C56013ED-24A1-49D0-9AA5-02D544B940BF.png" alt="Android"></p>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="http://www.codeceo.com/article/android-studio-unit-test.html" target="_blank" rel="external">Android测试</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Adb常用命令]]></title>
+      <url>http://yoursite.com/2016/08/18/Adb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<h3 id="adb-shell常用命令"><a href="#adb-shell常用命令" class="headerlink" title="adb shell常用命令"></a>adb shell常用命令</h3><a id="more"></a>
+<p>首先通过连接手机通过adb shell命令进入到shell环境<br><img src="http://oc3lx6w3r.bkt.clouddn.com/AB5335A2-111E-46F9-9ED5-0A8EDD64C4CD.png" alt="adb_shell"></p>
+<p>1.adb shell ps:查看进程信息<br><img src="http://oc3lx6w3r.bkt.clouddn.com/FFBA38ED-F64A-4B7A-A5B0-4E25BC2A0219.png" alt="adb_shell"></p>
+<p>2.adb shell service list:查看后台运行的所有服务<br><img src="http://oc3lx6w3r.bkt.clouddn.com/960AA3B8-0FC7-4E61-BFC9-69FE216F8C5D.png" alt="adb_shell"></p>
+<p>3.adb shell dumpsys [options] ：输出options的信息<br>通过service list查看到后台运行的服务后再通过dumpsys 服务 来查看服务信息<br>常用的一般是dumpsys activity top 命令来查看正在运行的app信息<br><img src="http://oc3lx6w3r.bkt.clouddn.com/F975F70B-993D-4EB8-B5BA-F193F8386253.png" alt="adb"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/D98CEE0D-783A-4B7E-ADA0-BF3D6FF67F20.png" alt="adb_shell"><br>4.adb shell screen cap <filename>:截屏，将图片存储在filename文件夹下<br><img src="http://oc3lx6w3r.bkt.clouddn.com/3DE79171-1AC4-44E9-9FD4-1F3D35730357.png" alt="adb_shell"><br>5.adb shell pm list packages [options]:查看包名<br>-f:所有安装的app包名<br>-s:安装的系统包名<br>-i:已经安装的app包名<br>-u:安装和未安装的所有app包名<br><img src="http://oc3lx6w3r.bkt.clouddn.com/79D93CD5-3FE5-4D00-9182-E5FDD8A4FF01.png" alt="adb_shell"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/F884B2AD-296F-41C4-8613-054C9D1971C2.png" alt="adb"><br>6.adb shell pm clear <package>:清除package所属的app的所有数据<br><img src="http://oc3lx6w3r.bkt.clouddn.com/EF645A0A-9A09-4FC7-8847-FA9629B2E75C.png" alt="adb_shell"><br>7.adb shell pm path <package>:显示package所属app所在的路径<br><img src="http://oc3lx6w3r.bkt.clouddn.com/2156226B-8C53-4EDC-8A92-18A675D8B80C.png" alt="adb_shell"><br>8.adb shell的其它命令与linux的一些命令的使用方法一样，因为android是基于linux开发的<br><img src="http://oc3lx6w3r.bkt.clouddn.com/E7E4AADE-2AB2-4FD6-A7B2-9A08B642C36B.png" alt="adb_shell"><br>9.monkey:压力测试<br>-p:测试的包名<br>-v:是否打印测试信息<br><img src="http://oc3lx6w3r.bkt.clouddn.com/BE770E2C-99F5-4809-BF08-D7A34601F294.png" alt="adb"></package></package></filename></p>
+<h3 id="adb常用命令"><a href="#adb常用命令" class="headerlink" title="adb常用命令"></a>adb常用命令</h3><p>1.adb  install 安装apk<br><img src="http://oc3lx6w3r.bkt.clouddn.com/E5C159D0-B150-4113-8951-0AF02EDF9A8A.png" alt="adb"><br>2.adb uninstall 删除apk<br><img src="http://oc3lx6w3r.bkt.clouddn.com/786B6986-E2F4-4F9A-B792-0B69C59FCB97.png" alt="adb"><br>3.adb pull 手机中的文件拉取到电脑<br><img src="http://oc3lx6w3r.bkt.clouddn.com/111B3B31-4BEE-42D7-884F-AC7A49E4DE59.png" alt="adb"><br>4.adb push 将电脑的文件推送到手机<br><img src="http://oc3lx6w3r.bkt.clouddn.com/EC34842B-800C-442B-9B38-2A5A01E8DE8A.png" alt="adb"></p>
+<h3 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h3><p>1.su 切换用户模式<br><img src="http://oc3lx6w3r.bkt.clouddn.com/C07FE704-C730-4C22-A13F-1DC5B771F215.png" alt="adb"><br>2.adb pull/push 权限拒绝问题<br>需要将相应的读写权限给相应的文件<br><img src="http://oc3lx6w3r.bkt.clouddn.com/CF08D1F4-981F-41BF-9412-15B8A1B0652A.png" alt="adb"><br>3.某些情况下，apk卸载后无法安装时<br><img src="http://oc3lx6w3r.bkt.clouddn.com/614BACFF-8A38-470E-85A4-C907F5560083.png" alt="adb"><br><img src="http://oc3lx6w3r.bkt.clouddn.com/086D46A1-CCB3-4603-BEF3-529815722D1E.png" alt="adb"><br>4.使用命令行进行apk签名<br><img src="http://oc3lx6w3r.bkt.clouddn.com/509F0CD9-428B-4FA2-A882-EF0BF490ED17.png" alt="adb"></p>
+<h5 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h5><ol>
+<li><a href="http://adbshell.com" target="_blank" rel="external">adb shell</a></li>
+<li><a href="https://www.zhihu.com/question/21074979/answer/18176410" target="_blank" rel="external">root原理</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Android相关导图]]></title>
+      <url>http://yoursite.com/2016/08/18/Android%E7%9B%B8%E5%85%B3%E5%AF%BC%E5%9B%BE/</url>
+      <content type="html"><![CDATA[<h3 id="1-View手势"><a href="#1-View手势" class="headerlink" title="1. View手势"></a>1. View手势</h3><a id="more"></a>
+<p><img src="http://oc3lx6w3r.bkt.clouddn.com/88d558d78d5f6716.jpg" alt="view_url"></p>
+<h3 id="2-View的坐标及位置"><a href="#2-View的坐标及位置" class="headerlink" title="2. View的坐标及位置"></a>2. View的坐标及位置</h3><p><img src="http://oc3lx6w3r.bkt.clouddn.com/5ce15b91eb13fbec.jpg" alt="view_location"></p>
+]]></content>
+    </entry>
+    
+  
+  
+    
+    <entry>
+      <title><![CDATA[about]]></title>
+      <url>http://yoursite.com/about/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[tags]]></title>
+      <url>http://yoursite.com/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+  
+</search>
