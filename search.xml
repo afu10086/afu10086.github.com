@@ -164,7 +164,8 @@
     <entry>
       <title><![CDATA[about]]></title>
       <url>http://yoursite.com/about/index.html</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<p><img src="/images/me_pic.jpg" alt=""></p>
+]]></content>
     </entry>
     
     <entry>
