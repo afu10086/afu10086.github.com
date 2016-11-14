@@ -4,6 +4,26 @@
   
     
     <entry>
+      <title><![CDATA[Hexo及Markdown的使用]]></title>
+      <url>http://yoursite.com/2016/11/14/Hexo%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      <content type="html"><![CDATA[<h5 id="Hexo的使用"><a href="#Hexo的使用" class="headerlink" title="Hexo的使用"></a>Hexo的使用</h5><ul>
+<li>Hexo常用的命令  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo new page [页面名]:新建页面</div><div class="line">hexo new [文章名]:新建文章名   </div><div class="line">hexo g(generate) ：生成静态文件   </div><div class="line">hexo d(deploy)：部署</div><div class="line">hexo clean :清空</div><div class="line">hexo s --debug :debug模式，在浏览器中输入：http://localhost:4000 可查看</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>  
+<ul>
+<li>Hexo使用过程中注意事项<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo中修改配置文件时要注意在[:]之后空一格再输入键值</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Markdown的使用"><a href="#Markdown的使用" class="headerlink" title="Markdown的使用"></a>Markdown的使用</h5><ul>
+<li>Markdown语法<br><a href="http://xianbai.me/learn-md/article/syntax/lists.html" target="_blank" rel="external">Markdown</a>  </li>
+<li>注意事项  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Markdown中的换行：二个空格加回车或者用&lt;br/&gt;</div><div class="line">Markdwon中的代码高亮：用&quot; ```代码``` &quot;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Vim编辑器的使用]]></title>
       <url>http://yoursite.com/2016/08/22/Vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<h5 id="Vim简介"><a href="#Vim简介" class="headerlink" title="Vim简介"></a>Vim简介</h5><p>Vim是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。简单的来说， vi 是老式的字处理器，不过功能已经很齐全了，但是还是有可以进步的地方。 vim 则可以说是程序开发者的一项很好用的工具<br><a id="more"></a></p>
