@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
@@ -102,15 +102,27 @@
 
 
 
-<meta name="description" content="Java | Android | IOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="技术笔记">
-<meta property="og:url" content="http://yoursite.com/tags/加密/index.html">
+<meta name="description" content="编码规范
+开发时jave类以及各种文件建议编码用UTF-8
+java代码中建议不要出现中文，最多注释中可以出现中文,但建议最好都不用中文
+类中public方法在前，private在后，所有不对外的方法，变量全部使用private修饰符。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开发规范">
+<meta property="og:url" content="http://yoursite.com/2016/11/14/Android开发规范/index.html">
 <meta property="og:site_name" content="技术笔记">
-<meta property="og:description" content="Java | Android | IOS">
+<meta property="og:description" content="编码规范
+开发时jave类以及各种文件建议编码用UTF-8
+java代码中建议不要出现中文，最多注释中可以出现中文,但建议最好都不用中文
+类中public方法在前，private在后，所有不对外的方法，变量全部使用private修饰符。">
+<meta property="og:image" content="http://yoursite.com/images/android_call_name.png">
+<meta property="og:updated_time" content="2016-11-15T08:23:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="技术笔记">
-<meta name="twitter:description" content="Java | Android | IOS">
+<meta name="twitter:title" content="Android开发规范">
+<meta name="twitter:description" content="编码规范
+开发时jave类以及各种文件建议编码用UTF-8
+java代码中建议不要出现中文，最多注释中可以出现中文,但建议最好都不用中文
+类中public方法在前，private在后，所有不对外的方法，变量全部使用private修饰符。">
+<meta name="twitter:image" content="http://yoursite.com/images/android_call_name.png">
 
 
 
@@ -131,10 +143,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/加密/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/14/Android开发规范/"/>
 
 
-  <title> 标签: 加密 | 技术笔记 </title>
+  <title> Android开发规范 | 技术笔记 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -165,7 +177,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -266,46 +278,170 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        加密
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="//schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android开发规范
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-14T21:29:46+08:00" content="2016-11-14">
+              2016-11-14
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/14/Android开发规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/14/Android开发规范/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-tags" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
+      
+        <h5 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h5><ul>
+<li>开发时jave类以及各种文件建议编码用UTF-8</li>
+<li>java代码中建议不要出现中文，最多注释中可以出现中文,但建议最好都不用中文</li>
+<li>类中public方法在前，private在后，所有不对外的方法，变量全部使用private修饰符。<a id="more"></a></li>
+<li>类中public static final的常量在最上方，其次private static final，然后public，private等。</li>
+<li>类中定义的接口放在变量声明之后，所有方法之前。</li>
+<li>方法相关性，方法之间有调用关系的，按照先后顺序排列在一起。</li>
+<li>善用空行，方法体之间必须空行，代码逻辑块之间使用空行分隔，变量声明根据变量类型适当空行。</li>
+<li>方法体不要过长，尽量提取小方法代替逻辑块，保证代码可读性。</li>
+<li>善用TODO，对于未完成或已完成但是方案不完美需后续跟踪的，使用TODO标签标示，并写好注释。</li>
+<li>不建议注释太多，要通过方法名，变量名提高代码可读性，而非注释。但是一些非常规方法，复杂逻辑，需要详细注释说明。</li>
+<li>协作中，不要做整个代码的格式化，仅格式化自己编写的那部分。</li>
+<li>注意命名以及注释英文单词，不要写错~</li>
+<li>杜绝“Magic Number”, 所有数值根据情况提取为常量，dimen或constant。</li>
+</ul>
+<h5 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h5><ol>
+<li>Java命名<br><img src="/images/android_call_name.png" alt="">  </li>
+<li>资源命名<br>|分类 | 命名方式 | 举例 | 说明 |<br>| :——| ——: | :——: | :——: |<br>| Layout | 全小写，单词下划线分隔，中间用功能模块区分；如：activity:activity_功能模块_名称；Fragment:fragment_功能模块_名称；ListView:item_list_功能模块_名称；RecycleView:item_recycle_功能模块_名称；自定义view：custom_view_功能模块_名称;PopWind：pop_功能模块_名称；其他被include的或公用组件，诸如title_bar,bottom_bar,根据实际含义命名 |activity_home<em>main.xml |所有的命名都按照：控件名或逻辑名\</em>功能模块_名称|<br>| Drawable | 全小写，单词下划线分隔，中间用功能模块区分 |btn_home_bg.png|根据图片使用方式命名， 图标以image_开头，背景以_bg结尾，状态drawable xml以_selector结尾|<br>| Color | 全小写，单词下划线分隔 |green |尽量根据颜色值命名|<br>| String | 全小写，单词下划线分隔 |app_name |模块多且大的话，根据模块建立不同的String xml 文件|<br>| Dimension | 全小写，单词下划线分隔 |left_padding ||<br>| Id | 全小写，单词下划线分隔 |user_name_tv |详细id命名规范参考以下章节|   </li>
+<li>布局文件中View的缩写<br>|View | 结尾命名规则 |<br>| ——| —— |<br>| TextView | tv |<br>| Button | btn |<br>| EditText | edit|<br>| ImageView | image|<br>| ImageButton | image_btn|<br>| RadioButton | radio_btn|<br>| RadioGroup | radio_gp|<br>| SeekBar | seek|<br>| ProgressBar | progress|<br>| Spinner | spinner|<br>| VideoView | video|<br>| CheckBox | check|<br>| ListView | list|<br>| GridView | grid|<br>| RecycleView | recycle|<br>| Layout | layout|</li>
+</ol>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2016/08/21/加密技术/" itemprop="url">
-              
-                <span itemprop="name">加密技术</span>
-              
-            </a>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/me_weixin_pay.png" alt="福 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-21T21:43:30+08:00"
-              content="2016-08-21" >
-          08-21
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/14/Hexo的使用/" rel="next" title="Hexo及Markdown的使用">
+                <i class="fa fa-chevron-left"></i> Hexo及Markdown的使用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -313,6 +449,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/14/Android开发规范/"
+           data-title="Android开发规范" data-url="http://yoursite.com/2016/11/14/Android开发规范/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -332,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oc3lx6w3r.bkt.clouddn.com/meImage.jpg"
@@ -387,6 +540,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#编码规范"><span class="nav-number">1.</span> <span class="nav-text">编码规范</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#命名规范"><span class="nav-number">2.</span> <span class="nav-text">命名规范</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -490,6 +654,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 

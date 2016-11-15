@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title><![CDATA[Android开发规范]]></title>
+      <url>http://yoursite.com/2016/11/14/Android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</url>
+      <content type="html"><![CDATA[<h5 id="编码规范"><a href="#编码规范" class="headerlink" title="编码规范"></a>编码规范</h5><ul>
+<li>开发时jave类以及各种文件建议编码用UTF-8</li>
+<li>java代码中建议不要出现中文，最多注释中可以出现中文,但建议最好都不用中文</li>
+<li>类中public方法在前，private在后，所有不对外的方法，变量全部使用private修饰符。<a id="more"></a></li>
+<li>类中public static final的常量在最上方，其次private static final，然后public，private等。</li>
+<li>类中定义的接口放在变量声明之后，所有方法之前。</li>
+<li>方法相关性，方法之间有调用关系的，按照先后顺序排列在一起。</li>
+<li>善用空行，方法体之间必须空行，代码逻辑块之间使用空行分隔，变量声明根据变量类型适当空行。</li>
+<li>方法体不要过长，尽量提取小方法代替逻辑块，保证代码可读性。</li>
+<li>善用TODO，对于未完成或已完成但是方案不完美需后续跟踪的，使用TODO标签标示，并写好注释。</li>
+<li>不建议注释太多，要通过方法名，变量名提高代码可读性，而非注释。但是一些非常规方法，复杂逻辑，需要详细注释说明。</li>
+<li>协作中，不要做整个代码的格式化，仅格式化自己编写的那部分。</li>
+<li>注意命名以及注释英文单词，不要写错~</li>
+<li>杜绝“Magic Number”, 所有数值根据情况提取为常量，dimen或constant。</li>
+</ul>
+<h5 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h5><ol>
+<li>Java命名<br><img src="/images/android_call_name.png" alt="">  </li>
+<li>资源命名<br>|分类 | 命名方式 | 举例 | 说明 |<br>| :——| ——: | :——: | :——: |<br>| Layout | 全小写，单词下划线分隔，中间用功能模块区分；如：activity:activity_功能模块_名称；Fragment:fragment_功能模块_名称；ListView:item_list_功能模块_名称；RecycleView:item_recycle_功能模块_名称；自定义view：custom_view_功能模块_名称;PopWind：pop_功能模块_名称；其他被include的或公用组件，诸如title_bar,bottom_bar,根据实际含义命名 |activity_home<em>main.xml |所有的命名都按照：控件名或逻辑名\</em>功能模块_名称|<br>| Drawable | 全小写，单词下划线分隔，中间用功能模块区分 |btn_home_bg.png|根据图片使用方式命名， 图标以image_开头，背景以_bg结尾，状态drawable xml以_selector结尾|<br>| Color | 全小写，单词下划线分隔 |green |尽量根据颜色值命名|<br>| String | 全小写，单词下划线分隔 |app_name |模块多且大的话，根据模块建立不同的String xml 文件|<br>| Dimension | 全小写，单词下划线分隔 |left_padding ||<br>| Id | 全小写，单词下划线分隔 |user_name_tv |详细id命名规范参考以下章节|   </li>
+<li>布局文件中View的缩写<br>|View | 结尾命名规则 |<br>| ——| —— |<br>| TextView | tv |<br>| Button | btn |<br>| EditText | edit|<br>| ImageView | image|<br>| ImageButton | image_btn|<br>| RadioButton | radio_btn|<br>| RadioGroup | radio_gp|<br>| SeekBar | seek|<br>| ProgressBar | progress|<br>| Spinner | spinner|<br>| VideoView | video|<br>| CheckBox | check|<br>| ListView | list|<br>| GridView | grid|<br>| RecycleView | recycle|<br>| Layout | layout|</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hexo及Markdown的使用]]></title>
       <url>http://yoursite.com/2016/11/14/Hexo%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
       <content type="html"><![CDATA[<h5 id="Hexo的使用"><a href="#Hexo的使用" class="headerlink" title="Hexo的使用"></a>Hexo的使用</h5><ul>
